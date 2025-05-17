@@ -324,8 +324,8 @@ void adminPanel()
                 case '2':
                     loadElectionInfoFromFile();
                     break;
-                case '3':
-                    int totalVoted=0;
+                case '3':{
+		    int totalVoted=0;
                     int WinnerCid = getWinner();
                     if(WinnerCid != -1){
                         printf("\nWinner is %s with %d votes\n",candidates[WinnerCid-1].cname,candidates[WinnerCid-1].votes);
@@ -340,6 +340,7 @@ void adminPanel()
                     }
                     printf("\nVoting Percentage: %d %%\n\n",(totalVoted*100)/currentVID.totalVoters);
                     break;
+		}  
                 case '4':
                     return;
                     break;
